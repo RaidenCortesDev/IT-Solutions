@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+
+		<title>Select - PWA con MD</title>
+
+		<meta name="theme-color" content="#fffbfe" />
+		<link rel="icon" sizes="32x32" href="favicon.ico" />
+		<link rel="manifest" href="site.webmanifest" />
+
+		<link rel="stylesheet" href="css/estilos.css" />
+		<script src="ungap/custom-elements.js"></script>
+		<script type="module" src="js/configura.js"></script>
+	</head>
+
+	<body>
+		<form>
+			<md-top-app-bar>
+				<h1>Select</h1>
+
+				<button is="md-menu-button" slot="navigation" onclick="nav.abre()"></button>
+			</md-top-app-bar>
+
+			<main>
+				<p class="md-filled-text-field">
+					<md-select-menu name="grupo" required aria-labelledby="etiquetaGrupo" options="opcionesDeGrupo" value="IC21"></md-select-menu>
+					<span id="etiquetaGrupo" accesskey="G">Grupo*</span>
+					<small>*Requerido</small>
+				</p>
+
+				<p>
+					<button class="md-filled-button" style="width: 100%">Enviar</button>
+				</p>
+			</main>
+
+			<md-options-menu id="opcionesDeGrupo" aria-label="Opciones de grupo">
+				<span data-value="" title="Selecciona opción"></span>
+
+				<span data-value="IC21">IC-21</span>
+
+				<span data-value="IC22">IC-22</span>
+
+				<span data-value="IC23">IC-23</span>
+			</md-options-menu>
+
+			<nav-drw id="nav"></nav-drw>
+		</form>
+	</body>
+</html>

@@ -4,38 +4,69 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 
-		<title>IT Solutions PWA</title>
+		<title>PWA con MD</title>
 
-		<!-- Resumen para los motores de búsqueda. -->
-		<meta name="description" content="Ejemplo de PWA" />
+		<meta
+			name="description"
+			content="Ejemplo de PWA con
+    Material Design"
+		/>
 
-		<!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
-		<meta name="theme-color" content="#cbc693" />
-
-		<!-- Ícono para la página web, que normalmente se pone en la raíz del sitio. Puede ser diferente para cada página. -->
+		<meta name="theme-color" content="#fffbfe" />
 		<link rel="icon" sizes="32x32" href="favicon.ico" />
-
-		<!-- Configuración de la PWA para Chrome y Edge. Debe ponerse en todas las páginas. -->
 		<link rel="manifest" href="site.webmanifest" />
 
+		<!-- Configuración de todas las
+   páginas y colores con CSS. -->
 		<link rel="stylesheet" href="css/estilos.css" />
 
+		<!-- Para manejar customized
+   built-in elements en Safari -->
+		<script src="ungap/custom-elements.js"></script>
+
+		<!-- Configuración de todas las
+   páginas con JavaSript. -->
 		<script type="module" src="js/configura.js"></script>
 	</head>
 
 	<body>
-		<h1>PWA Básica</h1>
+		<md-top-app-bar class="center-aligned">
+			<h1>PWA con MD</h1>
 
-		<p>Hola mundo.</p>
-		<br />
-		<p>Integrantes</p>
-		<br />
-		<p>Campos Figueroa Brandon</p>
-		<br />
-		<p>Chaparro Marin Daniel</p>
-		<br />
-		<p>Cortes Islas Brandon</p>
-		<br />
-		<p>Cruz Hernández Génesis Uriel Yair</p>
+			<button is="md-menu-button" slot="navigation" onclick="nav.abre()"></button>
+
+			<button type="button" title="Perfil" slot="action" class="md-standard-icon-button avatar">
+				<span class="material-symbols-outlined">account_circle</span>
+			</button>
+		</md-top-app-bar>
+
+		<main>
+			<p>Esta es la página principal de la app. Las X que siguen son para que veas como se comporta cuando se hace scroll.</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+			<p>x</p>
+		</main>
+
+		<nav-drw id="nav"></nav-drw>
 	</body>
 </html>
