@@ -1,60 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
 
-		<title>Campos de texto - PWA con MD</title>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport"
+   content="width=device-width">
 
-		<meta name="theme-color" content="#fffbfe" />
-		<link rel="icon" sizes="32x32" href="favicon.ico" />
-		<link rel="manifest" href="site.webmanifest" />
+ <title>
+  Campos de texto - PWA con MD
+ </title>
 
-		<link rel="stylesheet" href="css/estilos.css" />
-		<script src="ungap/custom-elements.js"></script>
-		<script type="module" src="js/configura.js"></script>
-	</head>
+ <meta name="theme-color"
+   content="#fffbfe">
+ <link rel="icon" sizes="32x32"
+   href="favicon.ico">
+ <link rel="manifest"
+   href="site.webmanifest">
 
-	<body>
-		<md-top-app-bar headline="headline">
-			<h1>Texto</h1>
+ <link rel="stylesheet"
+   href="css/estilos.css">
+ <script
+   src="ungap/custom-elements.js">
+   </script>
+ <script type="module"
+   src="js/configura.js"></script>
 
-			<button is="md-menu-button" slot="navigation" onclick="nav.abre()"></button>
-		</md-top-app-bar>
+</head>
 
-		<h1 id="headline">Campos de texto</h1>
+<body>
 
-		<main>
-			<!-- Usa class="float" cuando
+ <md-top-app-bar
+   headline="headline">
+
+  <h1>Texto</h1>
+
+  <button is="md-menu-button"
+    slot="navigation"
+    onclick="nav.abre()"></button>
+
+ </md-top-app-bar>
+
+ <h1 id="headline">Campos de texto</h1>
+
+ <main>
+
+
+  <!-- Usa class="float" cuando
    quieras que la etiqueta esté
    arriba todo el tiempo. -->
-			<p class="md-filled-text-field float">
-				<label for="saludo">Saludo</label>
-				<output id="saludo">Saludo</output>
-			</p>
+  <p class="md-filled-text-field float">
+   <label for="saludo">Saludo</label>
+   <output id="saludo">Saludo</output>
+  </p>
 
-			<p class="md-filled-text-field">
-				<input id="nombre" required placeholder="Nombre*" />
-				<label for="nombre">Nombre*</label>
-				<small>*Requerido</small>
-			</p>
+  <p class="md-filled-text-field">
+   <input id="nombre" required
+     placeholder="Nombre*">
+   <label for="nombre">Nombre*</label>
+   <small>*Requerido</small>
+  </p>
 
-			<p class="md-filled-text-field">
-				<input id="email" type="email" placeholder="Email" />
-				<label for="email" accesskey="M">Email</label>
-			</p>
+  <p class="md-filled-text-field">
+   <input id="email" type="email"
+     placeholder="Email">
+   <label for="email" accesskey="M">
+    Email
+   </label>
+  </p>
 
-			<p class="md-filled-text-field float">
-				<input id="fecha" type="date" placeholder="Fecha" />
-				<label for="fecha">Fecha</label>
-			</p>
+  <p class="md-filled-text-field float">
+   <input id="fecha" type="date"
+     placeholder="Fecha">
+   <label for="fecha">Fecha</label>
+  </p>
 
-			<p class="md-filled-text-field">
-				<textarea id="direccion" placeholder="Dirección" rows="3"></textarea>
-				<label for="direccion">Dirección</label>
-			</p>
-		</main>
+  <p class="md-filled-text-field">
+   <textarea id="direccion"
+     placeholder="Dirección"
+     rows="3"></textarea>
+   <label for="direccion">
+    Dirección
+   </label>
+  </p>
 
-		<nav-drw id="nav"></nav-drw>
-	</body>
+ </main>
+
+ <nav-drw id="nav"></nav-drw>
+
+</body>
+
 </html>
