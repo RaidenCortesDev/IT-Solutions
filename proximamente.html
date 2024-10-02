@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Próximamente - Chistes para Informáticos</title>
+		<meta name="description" content="It Solution de PWA con Material Design - Próximamente" />
+		<meta name="theme-color" content="#fffbfe" />
+		<link rel="icon" sizes="32x32" href="favicon.ico" />
+		<link rel="manifest" href="site.webmanifest" />
+		<!-- Configuración de todas las páginas y colores con CSS. -->
+		<link rel="stylesheet" href="css/estilos.css" />
+		<!-- Para manejar customized built-in elements en Safari -->
+		<script src="ungap/custom-elements.js"></script>
+		<!-- Configuración de todas las páginas con JavaScript. -->
+		<script type="module" src="js/configura.js"></script>
+	</head>
+
+	<body>
+		<md-top-app-bar class="center-aligned">
+			<h1>Chistes para Informáticos</h1>
+			<button is="md-menu-button" slot="navigation" onclick="nav.abre()"></button>
+			<button type="button" title="Perfil" slot="action" class="md-standard-icon-button avatar">
+				<span class="material-symbols-outlined">account_circle</span>
+			</button>
+		</md-top-app-bar>
+
+		<main>
+			<section class="coming-soon">
+				<h2>¡Próximamente!</h2>
+				<p>Estamos trabajando duro para traerte el mejor contenido de chistes para informáticos. Muy pronto podrás disfrutar de todo el humor que el mundo del desarrollo y la tecnología tiene para ofrecerte.</p>
+				<p>Mientras tanto, puedes seguirnos para recibir actualizaciones y ser el primero en saber cuándo estará lista la página.</p>
+				<p>¡Mantente conectado, y recuerda: la risa siempre es la mejor línea de código!</p>
+			</section>
+		</main>
+
+		<nav-drw id="nav"></nav-drw>
+	</body>
+</html>
