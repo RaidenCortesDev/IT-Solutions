@@ -13,14 +13,14 @@
     "screenshots": [
         {
             "src": "/img/screenshot_horizontal.png",
-            "sizes": "1919x773",
+            "sizes": "1186x722",
             "type": "image/png",
             "form_factor": "wide",
             "label": "PWA con Material Design"
         },
         {
             "src": "/img/screenshot_vertical.png",
-            "sizes": "258x458",
+            "sizes": "510x790",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "PWA con Material Design (2)"
@@ -78,12 +78,6 @@
         {
             "src": "/img/icono2048.png",
             "sizes": "1873x1873",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "/img/icono2048.png",
-            "sizes": "1869x1869",
             "type": "image/png",
             "purpose": "any"
         },
