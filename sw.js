@@ -15,7 +15,7 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.23";
+const VERSION = "1.24";
 
 /**
  * Nombre de la carpeta de caché.
@@ -51,6 +51,7 @@ const ARCHIVOS = [
 	"css/tokens.css",
 	"img/Escultura_de_coyote.jpeg",
 	"img/icono2048.png",
+	"img/img_cards.jpeg",
 	"img/maskable_icon.png",
 	"img/maskable_icon_x128.png",
 	"img/maskable_icon_x192.png",
