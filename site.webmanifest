@@ -82,6 +82,12 @@
             "purpose": "any"
         },
         {
+            "src": "/img/icono2048.png",
+            "sizes": "1869x1869",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
             "src": "/img/maskable_icon_x48.png",
             "sizes": "48x48",
             "type": "image/png",
