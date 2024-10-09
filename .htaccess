@@ -1,4 +1,11 @@
+AddType application/manifest+json .webmanifest
+
+ExpiresActive On
+
+Header set Cache-Control "max-age=1, must-revalidate"
+
 RewriteEngine On
+
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}

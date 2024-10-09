@@ -15,7 +15,7 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.31";
+const VERSION = "1.83";
 
 /**
  * Nombre de la carpeta de caché.
@@ -49,10 +49,12 @@ const ARCHIVOS = [
 	"two-line.html",
 	"css/estilos.css",
 	"css/tokens.css",
+	"css/transicion_completa.css",
+	"css/transicion_pestanas.css",
 	"img/Escultura_de_coyote.jpeg",
 	"img/icono2048.png",
-	"img/img_cards.jpeg",
 	"img/maskable_icon.png",
+	"img/img_cards.jpeg",
 	"img/maskable_icon_x128.png",
 	"img/maskable_icon_x192.png",
 	"img/maskable_icon_x384.png",
@@ -76,6 +78,7 @@ const ARCHIVOS = [
 	"js/nav-drw.js",
 	"js/nav-tab-fixed.js",
 	"js/nav-tab-scrollable.js",
+	"js/registraServiceWorker.js",
 	"lib/css/colors.module.css",
 	"lib/css/elevation.css",
 	"lib/css/material-symbols-outlined.css",
@@ -107,13 +110,13 @@ const ARCHIVOS = [
 	"lib/fonts/roboto-v32-latin-regular.woff2",
 	"lib/js/abreElementoHtml.js",
 	"lib/js/cierraElementoHtmo.js",
+	"lib/js/exportaAHtml.js",
 	"lib/js/getAttribute.js",
 	"lib/js/htmlentities.js",
 	"lib/js/muestraError.js",
 	"lib/js/muestraTextoDeAyuda.js",
 	"lib/js/ProblemDetails.js",
 	"lib/js/querySelector.js",
-	"lib/js/registraServiceWorkerSiEsSoportado.js",
 	"lib/js/resaltaSiEstasEn.js",
 	"lib/js/const/ES_APPLE.js",
 	"lib/js/custom/md-menu-button.js",

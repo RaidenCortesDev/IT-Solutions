@@ -2,96 +2,42 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
+		<title>IT Solution Comedy</title>
+
+		<script src="js/registraServiceWorker.js"></script>
+
 		<meta name="viewport" content="width=device-width" />
-
-		<title>PWA con MD</title>
-
-		<meta name="description" content="It Solution for Comedy" />
-
 		<meta name="theme-color" content="#fffbfe" />
 		<link rel="icon" sizes="32x32" href="favicon.ico" />
 		<link rel="manifest" href="site.webmanifest" />
-
-		<!-- Configuración de todas las páginas y colores con CSS. -->
-		<link rel="stylesheet" href="css/estilos.css" />
-
-		<!-- Para manejar customized built-in elements en Safari -->
 		<script src="ungap/custom-elements.js"></script>
 
-		<!-- Configuración de todas las páginas con JavaSript. -->
 		<script type="module" src="js/configura.js"></script>
+		<link rel="stylesheet" href="css/estilos.css" />
+		<link rel="stylesheet" href="css/transicion_pestanas.css" />
+		<link rel="expect" blocking="render" href="#navtab" />
 	</head>
 
 	<body>
-		<md-top-app-bar class="center-aligned">
-			<h1>IT Solution Comedy</h1>
-
-			<button is="md-menu-button" slot="navigation" onclick="nav.abre()"></button>
-
-			<button type="button" title="Perfil" slot="action" class="md-standard-icon-button avatar">
-				<span class="material-symbols-outlined">account_circle</span>
-			</button>
+		<md-top-app-bar adicional="tab" headline="headline">
+			<h1 class="center-aligned">IT Solution Comedy</h1>
 		</md-top-app-bar>
 
-		<main>
-			<section>
-				<h2 class="Alpha">Bienvenido a Chistes para Informáticos</h2>
-				<p>¡Bienvenidos, desarrolladores, entusiastas de la tecnología y amantes del código! Aquí encontrarás chistes que solo un verdadero geek entendería. Prepárate para reír con humor basado en bucles infinitos, mensajes de error, y esas eternas luchas con los compiladores.</p>
-				<p>
-					Recuerda: la vida es como un bucle
-					<code class="Alpha">while(true)</code>
-					, a veces parece que no tiene fin, pero siempre podemos encontrar algo que nos haga reír, aunque sea un
-					<code class="Alpha">segmentation fault</code>
-					.
-				</p>
-				<p>Explora, disfruta y comparte los chistes que harán que hasta el más serio admin de sistemas suelte una sonrisa.</p>
-			</section>
-		</main>
+		<h1 id="headline" class="center-aligned">IT Solution Comedy</h1>
 
-		<nav-drw id="nav"></nav-drw>
-		<div class="md-cards">
-			<a href="#"></a>
-			<a href="#"></a>
-			<a target="_blank" rel="noopener noreferrer" href="proximamente.html">
-				<div class="card">
-					<div class="image">
-						<figure>
-							<img alt="Chiste" src="img/img_cards.jpeg" />
-						</figure>
-					</div>
-					<div class="title">
-						<span class="headline-medium">El Error de Usuario</span>
-					</div>
-				</div>
-			</a>
-			
-			<a target="_blank" rel="noopener noreferrer" href="proximamente.html">
-				<div class="card">
-					<div class="image">
-						<figure>
-							<img alt="Chiste" src="img/img_cards.jpeg" />
-						</figure>
-					</div>
-					<div class="title">
-						<span class="headline-medium">La Prueba de Inteligencia</span>
-					</div>
-				</div>
-			</a>
-			
-			<a target="_blank" rel="noopener noreferrer" href="proximamente.html">
-				<div class="card">
-					<div class="image">
-						<figure>
-							<img alt="Chiste" src="img/img_cards.jpeg" />
-						</figure>
-					</div>
-					<div class="title">
-						<span class="headline-medium">Depurando la Realidad</span>
-					</div>
-				</div>
-			</a>
-			<a href="#"></a>
-			<a href="#"></a>
-		</div>
+		<nav-tab-scrollable id="tab"></nav-tab-scrollable>
+
+		<main>
+			<h2 style="color: #00ff00;">Bienvenido a IT Solution Comedy</h2>
+			<p>¡Bienvenidos, desarrolladores, entusiastas de la tecnología y amantes del código! Aquí encontrarás chistes que solo un verdadero geek entendería. Prepárate para reír con humor basado en bucles infinitos, mensajes de error, y esas eternas luchas con los compiladores.</p>
+			<p>
+				Recuerda: la vida es como un bucle
+				<code style="color: #00ff00;">while(true)</code>
+				, a veces parece que no tiene fin, pero siempre podemos encontrar algo que nos haga reír, aunque sea un
+				<code style="color: #00ff00;">segmentation fault</code>
+				.
+			</p>
+			<p>Explora, disfruta y comparte los chistes que harán que hasta el más serio admin de sistemas suelte una sonrisa.</p>
+		</main>
 	</body>
 </html>

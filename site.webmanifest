@@ -1,6 +1,6 @@
 {
-    "short_name": "PWA ITSC.",
-    "name": "PWA con Material Design IT Solution Comedy.",
+    "short_name": "ITS Comedy",
+    "name": "IT Solution Comedy",
     "id": "/index.html",
     "start_url": "/index.html",
     "display": "standalone",
@@ -9,21 +9,21 @@
     "display_override": [
         "window-controls-overlay"
     ],
-    "description": "PWA con Material Design IT Solution Comedy.",
+    "description": "IT Solution Comedy.",
     "screenshots": [
         {
             "src": "/img/screenshot_horizontal.png",
-            "sizes": "1186x722",
+            "sizes": "1283x786",
             "type": "image/png",
             "form_factor": "wide",
-            "label": "PWA con Material Design"
+            "label": "IT Solution Comedy"
         },
         {
             "src": "/img/screenshot_vertical.png",
-            "sizes": "510x790",
+            "sizes": "578x769",
             "type": "image/png",
             "form_factor": "narrow",
-            "label": "PWA con Material Design (2)"
+            "label": "IT Solution Comedy (2)"
         }
     ],
     "icons": [
@@ -71,13 +71,13 @@
         },
         {
             "src": "/img/maskable_icon.png",
-            "sizes": "284x284",
+            "sizes": "7058x7058",
             "type": "image/png",
             "purpose": "any"
         },
         {
             "src": "/img/icono2048.png",
-            "sizes": "1873x1873",
+            "sizes": "6000x6000",
             "type": "image/png",
             "purpose": "any"
         },
@@ -125,7 +125,7 @@
         },
         {
             "src": "/img/maskable_icon.png",
-            "sizes": "284x284",
+            "sizes": "7058x7058",
             "type": "image/png",
             "purpose": "maskable"
         }

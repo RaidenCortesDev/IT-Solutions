@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>IT Solution Comedy - ¿Contacto?</title>
+
+		<script src="js/registraServiceWorker.js"></script>
+
+		<meta name="viewport" content="width=device-width" />
+		<meta name="theme-color" content="#fffbfe" />
+		<link rel="icon" sizes="32x32" href="favicon.ico" />
+		<link rel="manifest" href="site.webmanifest" />
+		<script src="ungap/custom-elements.js"></script>
+
+		<script type="module" src="js/configura.js"></script>
+		<link rel="stylesheet" href="css/estilos.css" />
+		<link rel="stylesheet" href="css/transicion_pestanas.css" />
+		<link rel="expect" blocking="render" href="#navtab" />
+	</head>
+
+	<body>
+		<form id="form" novalidate onsubmit="procesa(event)">
+			<md-top-app-bar adicional="tab" headline="headline">
+				<h1 class="center-aligned">IT Solution Comedy - ¿Contacto?</h1>
+			</md-top-app-bar>
+
+			<h1 id="headline" class="center-aligned">IT Solution Comedy - ¿Contacto?</h1>
+
+			<nav-tab-scrollable id="tab"></nav-tab-scrollable>
+
+			<main>
+				<h2>¿Necesitas Contacto? Aquí va una broma en su lugar!</h2>
+				<p>
+					<span class="md-filled-text-field" accesskey="G">
+						<md-select-menu id="selectGenero" required options="opcionesDeGenero" oninput="copiaMensajes()"></md-select-menu>
+						<span>Selecciona tu consulta *</span>
+						<small id="supportingGenero">Obligatorio</small>
+					</span>
+				</p>
+
+				<p>
+					<button class="md-filled-button" style="width: 100%">Enviar</button>
+				</p>
+			</main>
+
+			<md-options-menu id="opcionesDeGenero" aria-label="Opciones de género">
+				<span data-value="" title="Selecciona opción"></span>
+				<span data-value="soporte">Soporte Técnico</span>
+				<span data-value="ventas">Ventas</span>
+				<span data-value="otros">Otros</span>
+			</md-options-menu>
+
+			<nav-drw></nav-drw>
+		</form>
+
+		<script type="module">
+			import { muestraTextoDeAyuda } from "./lib/js/muestraTextoDeAyuda.js";
+			import { exportaAHtml } from "./lib/js/exportaAHtml.js";
+			import { muestraError } from "./lib/js/muestraError.js";
+
+			function copiaMensajes() {
+				muestraTextoDeAyuda(selectGenero, supportingGenero, "Obligatorio");
+			}
+			exportaAHtml(copiaMensajes);
+
+			/**
+			 * @param {SubmitEvent} evt
+			 */
+			function procesa(evt) {
+				evt.preventDefault();
+				try {
+					copiaMensajes();
+					if (selectGenero.validity.valid) {
+						const genero = selectGenero.value;
+						const resultado = respondeConBroma(genero);
+						alert(resultado);
+					}
+				} catch (e) {
+					muestraError(e);
+				}
+			}
+			exportaAHtml(procesa);
+
+			/** @param {string} genero */
+			function respondeConBroma(genero) {
+				if (genero === "soporte") {
+					return "Soporte técnico: ¿Has intentado apagarlo y encenderlo otra vez?";
+				} else if (genero === "ventas") {
+					return "Ventas: ¿Sabías que el aire acondicionado viene sin aire?";
+				} else if (genero === "otros") {
+					return "Otros: El mejor contacto es el que se evita. ¡Suerte!";
+				} else {
+					return "Por favor, selecciona una opción válida.";
+				}
+			}
+		</script>
+	</body>
+</html>
