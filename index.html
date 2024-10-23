@@ -1,43 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<title>IT Solution Comedy</title>
 
-		<script src="js/registraServiceWorker.js"></script>
+<head>
 
-		<meta name="viewport" content="width=device-width" />
-		<meta name="theme-color" content="#fffbfe" />
-		<link rel="icon" sizes="32x32" href="favicon.ico" />
-		<link rel="manifest" href="site.webmanifest" />
-		<script src="ungap/custom-elements.js"></script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width">
 
-		<script type="module" src="js/configura.js"></script>
-		<link rel="stylesheet" href="css/estilos.css" />
-		<link rel="stylesheet" href="css/transicion_pestanas.css" />
-		<link rel="expect" blocking="render" href="#navtab" />
-	</head>
+ <title>Render en el servidor</title>
 
-	<body>
-		<md-top-app-bar adicional="tab" headline="headline">
-			<h1 class="center-aligned">IT Solution Comedy</h1>
-		</md-top-app-bar>
+ <script type="module" src="lib/js/consumeJson.js"></script>
+ <script type="module" src="lib/js/muestraObjeto.js"></script>
+ <script type="module" src="lib/js/muestraError.js"></script>
 
-		<h1 id="headline" class="center-aligned">IT Solution Comedy</h1>
+</head>
 
-		<nav-tab-scrollable id="tab"></nav-tab-scrollable>
+<body onload="consumeJson('srv/render.php')
+  .then(respuesta => muestraObjeto(document, respuesta.body))
+  .catch(muestraError)">
 
-		<main>
-			<h2 style="color: #00ff00;">Bienvenido a IT Solution Comedy</h2>
-			<p>¡Bienvenidos, desarrolladores, entusiastas de la tecnología y amantes del código! Aquí encontrarás chistes que solo un verdadero geek entendería. Prepárate para reír con humor basado en bucles infinitos, mensajes de error, y esas eternas luchas con los compiladores.</p>
-			<p>
-				Recuerda: la vida es como un bucle
-				<code style="color: #00ff00;">while(true)</code>
-				, a veces parece que no tiene fin, pero siempre podemos encontrar algo que nos haga reír, aunque sea un
-				<code style="color: #00ff00;">segmentation fault</code>
-				.
-			</p>
-			<p>Explora, disfruta y comparte los chistes que harán que hasta el más serio admin de sistemas suelte una sonrisa.</p>
-		</main>
-	</body>
+ <h1>Render en el servidor</h1>
+
+ <dl id="lista">
+  <dt>Cargando&hellip;</dt>
+  <dd><progress max="100">Cargando&hellip;</progress></dd>
+ </dl>
+
+</body>
+
 </html>
